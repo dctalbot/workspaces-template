@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "workspaces": [
+    "mobile",
+    "server"
+  ],
+  "scripts": {
+    "format": "prettier -l --write '**/*.{js,yml,yaml,json,css,ts,tsx,html}'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
+  },
+  "dependencies": {
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "semi": false
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/@typescript-eslint"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+  }
+}

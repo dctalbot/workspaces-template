@@ -1,0 +1,1 @@
+Simple template for yarn workspaces that comes with some linting and formatting too
